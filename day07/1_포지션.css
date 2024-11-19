@@ -1,0 +1,29 @@
+.box{width : 100px; height: 100px;
+     border: 1px solid red;
+     background-color: yellow;
+    }
+.box2{background-color: red;
+      position: relative; /*상대적인 뜻 상대위치: 본래 지정된 구역의 위치부터 시작*/
+      top : 10px; left: 30px; /*기존 위치에서 윗변 기준으로 10px만큼 아래로 이동, 기존 위치에서부터 왼쪽변 기준으로 30px 오른쪽으로 이동함*/
+      }
+.box3{background-color: brown;
+      position: absolute; /*절대 위치 : 부모 구역의 위치부터 시작*/
+      top: 50px; left: 50px; /*부모 위치에서부터 윗변 기준으로 50px 아래로 이동, 부모 위치에서부터 왼쪽변 기준으로 50px만큼 오른쪽으로 이동*/
+      }
+
+.box4{background-color: blueviolet;
+      position: static; /*정적인(뜻) : 고정위치(기본값/생략가능) : top,left,right,bottom 속성 사용 불가*/ 
+     }
+
+.box5{background-color: green;
+      position: fixed; /* 고정위치: 결정된 위치: 디바이스의 위치 고정(디바이스를 따라 고정됨)*/
+      bottom: 30px; right: 30px; /*오른쪽 하단에 고정*/
+     }
+.parent{background-color: blue; padding: 10px;
+        position: relative;}
+
+
+.box6{background-color: antiquewhite;
+     position: absolute; /*absolute는 가장 가까운 relative를 가진 조상의 기준점을 따라감*/
+     top: 50px; right: 50px; }
+
