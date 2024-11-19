@@ -1,0 +1,22 @@
+#mainMenu{
+    display: flex; justify-content: space-between; align-items: center; 
+    padding: 0px 40px;
+  }
+  #mainMenu > ul{  display: flex;  width: 80%; }
+  #mainMenu > ul > li{
+      height: 80px; width: 80px;
+      display: flex; align-items: center; justify-content: center;
+  }
+
+  
+  #mainMenu > ul > li{ position: relative; }
+#mainMenu .subMenu{ 
+  position: absolute; top: 80px;
+  background-color: white;
+  width: 130%;        /* 부모( 본메뉴 li )에 사이즈보다 1.3배 */ 
+  text-align: center;
+  display: none; /* 서브 메뉴 숨기기 */
+}
+#mainMenu .subMenu > li{ margin:10px;}
+/* 본메뉴(li)에 hover(마우스를 올렸을때) 했을때 subMenu 보이도록 */
+#mainMenu > ul > li:hover .subMenu{ display: block;}

@@ -1,0 +1,7 @@
+#header2{background-color: skyblue;}
+#header2 >ul{display: flex; justify-content: center;}
+#header2 >ul >li{padding:10px;}
+#header2{position: relative;}
+#header2 .submenu2{position : absolute; top:40px; display: none; background-color: skyblue; width: 100%;}
+li{list-style-type: none;}
+#header2 >ul:hover .submenu2{display: block;}

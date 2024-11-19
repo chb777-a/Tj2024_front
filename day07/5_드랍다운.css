@@ -1,0 +1,19 @@
+#header{
+    background-color: yellow;
+}
+
+ul{ display: flex; justify-content: center;}
+li{list-style-type: none; /* li 글머리 제거*/
+                  padding: 20px;}
+
+.submenu{display: none; position: absolute; top:50px; left: 0px; background-color: beige; padding: 10px; } /*block, inline, inline-block, none, flex*/
+
+
+/*지정된 li 마크업을 hover했을 때 서브메뉴 열기*/
+/*선택자:hover 변경할선택자{ }*/
+.menu:hover .submenu{display: none;} /* 기존의 display:none 값을 hover 했을 때 block으로 css 변경*/
+
+/*예제2*/
+
+#header2{background-color: skyblue;}
+ul {display: flex; justify-content: center;}
