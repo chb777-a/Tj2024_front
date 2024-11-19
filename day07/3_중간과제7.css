@@ -1,0 +1,14 @@
+.parent{ width: 1000px; height:1000px; margin: 0 auto; background-color: skyblue;}
+
+.box{ width: 100px; height: 70px;
+      background-color: yellow;
+    border-radius: 10px;
+    display: flex; justify-content: center; align-items: center;
+    position: absolute;}
+
+.box1{ left: 300px; top: 50px;}
+.box2{ left: 150px; top: 120px;}
+.box3{ left: 450px; top: 120px;}
+.box4{ left: 150px; top: 250px;}
+.box5{ left: 450px; top: 250px;}
+.box6{ left: 300px; top: 320px;}
