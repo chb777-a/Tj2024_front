@@ -11,8 +11,19 @@
         2-Commit : 파일을 추가/변경 된 내용을 저장소에 저장하는 작업
         3-push : 추가/변경 된 내용을 원격(github 서버) 저장소에 업로드 작업
     
+    6.저장소 만드는 사람/계정 , 파일 commit/push 이름/아이디 별로 존재한다.
+
+
 [vscode 와 github 연동 방법]
     1.github 회원가입
     2.git 설치 : vscode 3번째 메뉴 git 다운로드(윈도우용) - https://git-scm.com/downloads/win - all next
     3.vscode 재실행 후 왼쪽 메뉴에 소스 제어 탭 클릭
-    4. github에 게시
+    4.github에 게시
+    5.로그인 후 [본인아이디]/프로젝트명 선택 확인 (업로드)
+    6.[vs code 상단메뉴] -> [터미널] -> [새 터미널] -> +아이콘 옆 v 클릭 -> git bash (최초 git 사용시 : git 에서 'user.name' 및 'user email' 구성 해야함)
+    7.[git user.name 확인]git config --global user.name
+      [git user.name 설정]git config --global user.name git 아이디
+      [git user.email 확인]git config --global user.email
+      [git user.email 설정]git config --global user.email git 이메일
+    8.소스 제어 탭 - 소스 제어 탭 - 메시지 입력칸(기록 메세지) - 커밋 및 푸시
+
