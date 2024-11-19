@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <h1> 입력 폼, 입력관련 마크업들</h1>
+
+    <form><!--form : 여러 입력 마크업들을 묶어주는 역할, 백엔드(자바) 통신-->
+        <input type="text" value="유재석"/ disabled><br/>
+        <input type="password" placeholder="password" maxlength="7" autofocus /><br/>
+        <input type="email" value="qwer@qwer" readonly/><br/>
+        <input type="file" /><br/>
+        <input type="file" multiple /> <br/> <!--첨부파일 여러개-->
+        <input type="submit" /> <!--폼 전송, 백엔드에게 통신 전송--> <br/>
+        <input type="date" /><br/>
+        <input type="datetime-local" /><br/> <!--날짜 및 시간-->
+        <input type="color" /><br/>
+        <input type="time" /><br/>
+        <input type="month" /><br/>
+        <input type="week" /><br/>
+        <input type="range" /><br/>
+        <input type="number" /><br/>
+        <input type="radio" name="동의여부"/> 예 <input type="radio" name="동의여부"/> 아니요<br/> <!--단일 선택(name 똑같이 하면 단일선택/ name 다르게 하면 복수선택 가능)--></br>
+        <input type="checkbox" name="동의여부"/> 뉴스  <input type="checkbox" name="동의여부2"/> 검색 <!--복수 선택--> </br>
+        <input type="reset" /> <!--현재 폼 안에 관련된 값 초기화--> </br>
+        <input type="button" /> <!--일반 버튼, 자바스크립트 이벤트(함수) 연동--> </br>
+        
+        <textarea rows="10" cols="15"> 긴 글 텍스트 상자 </textarea> <!--rows=세로, cols=가로 문자 수 (영문 기준)--> </br>
+
+        <select>
+            <option> 네이버 </option>
+            <option> 카카오 </option>
+            <option> 구글 </option>
+        </select>
+    </form>
+    
+    <form>
+        <fieldset>
+        <legend> 사용자 아이디 </legend>
+        <label>아이디</label> <input type="text" />
+        </fieldset>
+        <label>비밀번호</label> <input type="password" />
+    </form>
+</body>
+</html>

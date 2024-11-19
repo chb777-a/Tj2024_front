@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <img src="실리카겔 로고.jpg"/> 
+    <h1>실리카겔 콘서트 만족도 조사</h1>
+
+    <form>
+        <lable> 작성일: </lable> <input type="date" /> 시간: <input type="time" /><br />
+        <lable> 작성자: </lable><input type="text" /><br />
+        <table border="1">
+            <tr>
+                <th colspan="5" align="left">
+                    1. 음향은 만족스러웠나?
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <input type="radio" name="music_satisfaction" />1점
+                </td>
+                <td>
+                    <input type="radio" name="music_satisfaction" />2점
+                </td>
+                <td>
+                    <input type="radio" name="music_satisfaction" />3점
+                </td>
+                <td>
+                    <input type="radio" name="music_satisfaction" />4점
+                </td>
+                <td>
+                    <input type="radio" name="music_satisfaction" />5점
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="5">
+                    2. 세트리스트에 추가됐으면 하는 곡
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" />비경
+                </td>
+                <td>
+                    <input type="checkbox" />눈동자
+                </td>
+                <td>
+                    <input type="checkbox" />Orange
+                </td>
+                <td>
+                    <input type="checkbox" />걍
+                </td>
+                <td>
+                    <input type="checkbox" />모두 그래
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="5">
+                    3. 만족스러웠던 무대 매너는?
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" />열정
+                </td>
+                <td>
+                    <input type="checkbox" />관객과의 소통
+                </td>
+                <td>
+                    <input type="checkbox" />노래 실력
+                </td>
+                <td>
+                    <input type="checkbox" />화려한 댄스
+                </td>
+                <td>
+                    <input type="checkbox" />강렬한 눈빛
+                </td>
+            </tr>
+            <tr>
+                <td colspan="5">
+                    4. 재방문 의사가 있는가?
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="radio" name="yesno">매우 그렇다
+                </td>
+                <td>
+                    <input type="radio" name="yesno">그렇다
+                </td>
+                <td>
+                    <input type="radio" name="yesno">보통
+                </td>
+                <td>
+                    <input type="radio" name="yesno">아니다
+                </td>
+                <td>
+                    <input type="radio" name="yesno">매우 아니다
+                </td>
+            </tr>
+            <tr>
+                <td colspan="5">
+                    5. 기타 의견
+                </td>
+
+            </tr>
+            <tr>
+                <td colspan="5">
+                    <textarea rows="5" cols="100" placeholder="내용"></textarea>
+                </td>
+            </tr>
+        </table>
+        <input type="reset" />초기화 <input type="submit" value="제출" />
+    </form>
+</body>
+
+</html>

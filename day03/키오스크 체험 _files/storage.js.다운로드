@@ -1,0 +1,22 @@
+/* 로컬 스토리지 특정 데이터 저장 */
+function saveLocalData(key, value){
+	//특정 데이터 저장 실시
+	localStorage.setItem(key, value);
+};
+
+/* 로컬 스토리지 특정 데이터 삭제 */
+function deleteLocalData(key){
+	//특정 데이터 삭제 실시
+	localStorage.removeItem(key);
+};
+
+/* 로컬 스토리지 전체 데이터 삭제 */
+function deleteAllLocalData(){
+	//전체 데이터 삭제 실시
+	localStorage.clear();
+};
+
+/* 로컬 스토리지 특정 데이터 조회 */
+function selectLocalData(key){
+	return localStorage.getItem(key);
+};

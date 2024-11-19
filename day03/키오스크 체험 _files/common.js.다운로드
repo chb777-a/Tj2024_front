@@ -1,0 +1,18 @@
+// JavaScript Document
+$(document).ready(function() {
+	$(".popup_wrap").on('click',function(e){
+		if($(this).is(e.target)){
+			$(this).fadeOut();
+		}
+	});
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+	// vh 브라우저 탭 사이즈 제거
+	let vh = window.innerHeight * 0.01;
+	document.documentElement.style.setProperty('--vh', `${vh}px`);
+	window.addEventListener('resize', () => {
+		let vh = window.innerHeight * 0.01;
+		document.documentElement.style.setProperty('--vh', `${vh}px`);
+	});
+});

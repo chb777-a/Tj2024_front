@@ -1,0 +1,92 @@
+[CSS]
+    1.주로 HTML언어를 꾸미는 목적으로 사용
+    2.CSS는 종속형 스타일 언어
+    3.CSS는 (HTML)종속형 스타일 언어, 즉 HTML안에서 같이 실행되는 언어
+    4.CSS 적용방법
+        1.적용할 마크업에 style 속성을 사용(식별X)
+        <마크업에 style 속성을 사용 <마크업 style="속성명 : 속성값;">
+
+        2.<head> 마크업에 <style> 마크업 안에 css 작성 (식별O)
+            <head>
+                <style>
+                    식별자{속성명 : 속성값;}
+                </style>
+            </head>
+
+        3.<head> 마크업에 <link> 마크업 이용한 css 파일 포함하기 (식별O)
+            1. CSS 파일 만들기, 확장자 css
+            2. css파일내 css 코드 작성하기
+                식별자{속성명 : 속성값;}
+            3. 적용할 html 파일내 css파일 포함하기
+                <head>
+                    <link href="호출할css파일경로" rel="stylesheet"/>
+                </head>
+
+
+    5.★누구를 (무엇을 : 어떻게 ;)★
+
+[CSS 선택자]
+    1. 종류
+        1. 전체선택자,  *,  *{속성명:값;}
+        2. 마크업 선택자, 마크업명, h1{속성명:값;}
+        3. 클래스 선택자, .클래스명, .box{속성명:값;} box=class
+        4. 아이디 선택자, #아이디명, #cont{속성명:값;} cont=id
+            - 클래스와 아이디는 개발자가 마크업에서 임의로 이름을 정의한다.
+
+    2. 속성명이 중복일 때 적용 우선순위
+        - #아이디 > .클래스 > 마크업 > * (전체선택)
+        - 선택자가 동일한 경우는 작성순으로 아래에 있는 속성명이 최종 적용된다.
+
+    3. 여려개 선택자를 한 번에 꾸미기
+        - , 쉼표를 이용해 여러개 선택자 작성
+        - 선택자1, 선택자2, 선택자3{속성명:값;}
+
+    4. 특정 선택자의 하위 선택자를 선택할 때
+        - >(꺽은 괄호) 이용한 접근/선택
+        - 상위선택자 > 하위선택자 {속성명:값;}
+    
+    5. 특정 선택자의 모든 하위 선택자를 선택할 때
+        - (띄워쓰기) 이용한 접근/선택
+        - 상위선택자 하위선택자{속성명:값;}
+
+[CSS 속성 종류]
+    1.color : 폰트 색상 3가지 방법
+    2.font-family : "폰트명" , 글꼴명
+    3.font-size : 크기(px)
+    4.font-style: litalic; , 기울기
+    5.font- weight: bold; , 진하게 (100~900)
+    6.word-spacing: 크기px, 어간
+    7.letter-spacing: 크기px , 자간
+    8.line-height: 배율% , 줄간격, 기본값:150% 시작
+    9.text-align : left/right/center , 텍스트 가로 정렬
+    10.text-decoration : 줄종류, underline, overline, line-through
+    11.text-shadow: x축 y축 오퍼시티
+
+[색상]
+    1.헥스코드 (#00000)
+    2.rgb 코드 (rgb)
+    3.색상명
+
+
+*눈누 웹폰트*
+[박스/구역/모델 , 컨첸츠/내용물]
+    -모든 마크업들은 하나의 구역/박스를 갖는다. ex) <p> </p>
+    -컨텐츠 : 박스 안에 포함된 내용물 ex) <p> 컨텐츠 </p> * text-align : center - 컨텐츠 가운데 정렬*
+
+
+
+[CSS 박스/구역 속성 종류]
+    1.border : 선종류 선굵기px 선색상 ;
+        - 선종류 : solid, dotted, dashed, double
+        - border-top, right, bottom, left 
+    2.border-radius : 둥근정도px; *둥근 모서리
+    3.box-shadow : x축 y축 오퍼시티(px) 색상;
+    4.width : 가로 사이즈 px (생략시 100%로 들어감)
+    5.height : 세로 사이즈 px (생략시 100%로 들어감)
+    6.margin : 바깥 여백-테두리와 근접한 구역 사이 여백
+    7.padding : 안쪽 여백-내용물과 테두리 사이 여백
+        *margin / padding - top, right, bottom, left 로 개별 조정 가능
+        *margin / padding : 시계 방향(위 오른쪽 아래 왼쪽) 2 단위만 쓰면 위/아래set, 오/왼set [ex padding :20px 20px;로 작성 시]
+        **margin : 0 auto : 구역 가로 가운데 정렬**
+    8.background-color : 배경색
+

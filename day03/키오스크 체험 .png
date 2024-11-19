@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)http://www.xn-%2D2i0b122a69q.kr/megacoffee/sub01.do -->
+<html lang="ko" style="--vh: 11.85px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="application-name" content="비그플">
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="비그플">
+	<meta property="og:url" content="/megacoffee/sub01.do">
+	<meta property="og:title" content="키오스크 체험">
+	<title>키오스크 체험 - 메가커피 주문 | 비그플</title>
+	<link rel="shortcut icon" href="http://www.xn--2i0b122a69q.kr/home/www/images/1634876187085.png">
+	<link rel="stylesheet" type="text/css" href="./키오스크 체험 _files/basic.css">
+	<link rel="stylesheet" type="text/css" href="./키오스크 체험 _files/all.css">
+	<link rel="stylesheet" type="text/css" href="./키오스크 체험 _files/layout.css">
+	<script type="text/javascript" src="./키오스크 체험 _files/jquery.min.js.다운로드"></script>
+	<script type="text/javascript" src="./키오스크 체험 _files/storage.js.다운로드"></script>
+	<script type="text/javascript" src="./키오스크 체험 _files/common.js.다운로드"></script>
+	<script>
+	$(document).ready(function() {
+		// 안드로이드 앱 구분
+		function isMobile(){
+			// 유저에이전트를 불러와서 OS를 구분합니다.
+			var userAgent = navigator.userAgent.toLowerCase();
+			if (userAgent.search("android") > -1){
+				return true;
+			} else {
+				return false;
+			}
+		}
+		if (isMobile()){
+			var exitBtn = '<div class="popClose"><i class="fal fa-times-circle"></i></div>';
+			$(".kiosk_wrap").prepend(exitBtn);
+		}
+		// 닫기
+		$(document).on('click', '.popClose', function(e) {
+			e.preventDefault();
+			if (isMobile()){
+				window.HybridApp.closePopup()
+			}
+		});
+	});
+	</script>
+	<style>
+		.kiosk_wrap { position:relative; }
+		.popClose { position:absolute; top:10px; right:10px; }
+		.popClose i {font-size:44px;}
+	</style>
+<script>
+$(document).ready(function() {
+	$(".menu_list").on('click', 'input[type="checkbox"]', function() {
+		let num = $(".order_list .order_row").length;
+		let orderId = $(this).attr("id");
+		let name = $(this).data("name");
+		let price = $(this).data("price");
+		let price1 = price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+		if($(this).is(":checked") == true){
+			// 주문 추가
+			let itemList  = '<div class="order_row" id="item_'+ orderId +'" data-name="'+ name +'" data-price="'+ price +'" data-count="1" data-priceSum="'+ price +'">';
+				itemList += '	<a href="#" class="del_menu"><i class="fa-regular fa-xmark"></i></a>';
+				itemList += '	<span class="name">'+ name +'</span>';
+				itemList += '	<div class="order_add">';
+				itemList += '		<a href="#" class="item_minus"><i class="fa-regular fa-minus"></i></a>';
+				itemList += '		<span>1개</span>';
+				itemList += '		<a href="#" class="item_plus"><i class="fa-regular fa-plus"></i></a>';
+				itemList += '	</div>';
+				itemList += '	<span class="price">'+ price1 +'원</span>';
+				itemList += '</div>';
+			$(".order_list").append(itemList);
+		} else {
+			// 주문 삭제
+			$("#item_"+ orderId).remove();
+		}
+		price_calc();
+	});
+
+	// 상품 개수 빼기
+	$(document).on('click', '.order_add .item_minus', function(e) {
+		e.preventDefault();
+		var orderRow = $(this).closest('.order_row');
+		let name = $(orderRow).attr("data-name");
+		let price = $(orderRow).attr("data-price");
+		let count = $(orderRow).attr("data-count");
+		let priceSum = $(orderRow).attr("data-pricesum");
+		if(count <= 1){
+			return false;
+		}
+
+		count = Number(count)+1;
+		let priceSum1 = Number(price)*count;
+		let priceSum2 = priceSum1.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+		$(orderRow).attr("data-count",count);
+		$(orderRow).attr("data-pricesum",priceSum1);
+		$(orderRow).find(".order_add span").text(count+"개");
+		$(orderRow).find(".price").text(priceSum2 +"원");
+		price_calc();
+	});
+
+	// 상품 개수 더하기
+	$(document).on('click', '.order_add .item_plus', function(e) {
+		e.preventDefault();
+		var orderRow = $(this).closest('.order_row');
+		let name = $(orderRow).attr("data-name");
+		let price = $(orderRow).attr("data-price");
+		let count = $(orderRow).attr("data-count");
+		let priceSum = $(orderRow).attr("data-pricesum");
+
+		count = Number(count)+1;
+		let priceSum1 = Number(price)*count;
+		let priceSum2 = priceSum1.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+		$(orderRow).attr("data-count",count);
+		$(orderRow).attr("data-pricesum",priceSum1);
+		$(orderRow).find(".order_add span").text(count+"개");
+		$(orderRow).find(".price").text(priceSum2 +"원");
+		price_calc();
+	});
+
+	// 상품 삭제
+	$(document).on('click', '.del_menu', function(e) {
+		e.preventDefault();
+		var orderRow = $(this).closest('.order_row');
+		let id = $(orderRow).attr("id");
+		$(orderRow).remove();
+		$("#"+id.split("_")[1]).prop("checked",false);
+		price_calc();
+	});
+
+	// 상품 전체 삭제
+	$(document).on('click', '.order_del', function(e) {
+		e.preventDefault();
+		$(".menu_list").find("input[type='checkbox']").prop("checked",false);
+		$(".order_list").children().remove();
+		price_calc();
+	});
+
+	// 결제하기
+	$(document).on('click', '.order_pay', function(e) {
+		e.preventDefault();
+		let priceSumTot = 0;
+		let orderList = [];
+		$('.order_list div.order_row').each(function() {
+			var priceSum = $(this).attr("data-pricesum");
+			priceSumTot = priceSumTot + Number(priceSum);
+			orderList.push($(this).attr("data-name") +"|"+ $(this).attr("data-count") +"|"+ $(this).attr("data-pricesum"));
+		});
+		if(priceSumTot <= 0){
+			alert("메뉴를 한개이상 선택하셔야 합니다.");
+			return false;
+		}
+		saveLocalData("priceSum", priceSumTot);	// 합계저장
+		saveLocalData("orderList", JSON.stringify(orderList));	// 합계저장
+		location.href = "sub02.do";
+	});
+
+});
+
+// 전체 금액 계산
+function price_calc(){
+	let priceSumTot = 0;
+	$('.order_list div.order_row').each(function() {
+		var priceSum = $(this).attr("data-pricesum");
+		priceSumTot = priceSumTot + Number(priceSum);
+	});
+	let priceSumTot1 = priceSumTot.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+	$(".price_cnt").text($('.order_list div.order_row').length);
+	$(".price_sum").text(priceSumTot1);
+}
+</script></head>
+<body>
+    <div class="kiosk_wrap">
+        <div class="select_menu">
+            <div class="menu_tab">
+                <span><i class="fa-regular fa-angle-left"></i></span>
+                <ul>
+                    <li class="active"><a href="http://www.xn--2i0b122a69q.kr/megacoffee/sub01.do#">추천메뉴</a></li>
+                    <li><a href="http://www.xn--2i0b122a69q.kr/megacoffee/sub01.do#">커피(HOT)</a></li>
+                    <li><a href="http://www.xn--2i0b122a69q.kr/megacoffee/sub01.do#">커피(ICE)</a></li>
+                    <li><a href="http://www.xn--2i0b122a69q.kr/megacoffee/sub01.do#">스무디&amp;프라페</a></li>
+                </ul>
+                <span><i class="fa-regular fa-angle-right"></i></span>
+            </div>
+            <div class="menu_list">
+                <ul>
+                    <li>
+                        <input type="checkbox" id="menu01" data-name="(ICE)아메리카노" data-price="2000">
+                        <label for="menu01">
+                            <img src="./키오스크 체험 _files/coffee01.jpeg" alt="(ICE)아메리카노">
+                            <span class="name">(ICE)아메리카노</span>
+                            <span class="price">2,000원</span>
+                        </label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="menu02" data-name="(HOT)카페모카" data-price="4000">
+                        <label for="menu02">
+                            <img src="./키오스크 체험 _files/coffee02.jpeg" alt="(HOT)카페모카">
+                            <span class="name">(HOT)카페모카</span>
+                            <span class="price">4,000원</span>
+                        </label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="menu03" data-name="떠먹는 커피쿠키케이크" data-price="5500">
+                        <label for="menu03">
+                            <img src="./키오스크 체험 _files/coffee03.jpeg" alt="떠먹는 커피쿠키케이크">
+                            <span class="name">떠먹는 커피쿠키케이크</span>
+                            <span class="price">5,500원</span>
+                        </label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="menu04" data-name="(HOT)아메리카노" data-price="1800">
+                        <label for="menu04">
+                            <img src="./키오스크 체험 _files/coffee04.jpeg" alt="(HOT)아메리카노">
+                            <span class="name">(HOT)아메리카노</span>
+                            <span class="price">1,800원</span>
+                        </label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="menu05" data-name="(ICE)티라미수라떼" data-price="3600">
+                        <label for="menu05">
+                            <img src="./키오스크 체험 _files/coffee05.jpeg" alt="(ICE)티라미수라떼">
+                            <span class="name">(ICE)티라미수라떼</span>
+                            <span class="price">3,600원</span>
+                        </label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="menu06" data-name="(ICE)연유라떼" data-price="3700">
+                        <label for="menu06">
+                            <img src="./키오스크 체험 _files/coffee06.jpeg" alt="(ICE)연유라떼">
+                            <span class="name">(ICE)연유라떼</span>
+                            <span class="price">3,700원</span>
+                        </label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="menu07" data-name="(HOT)사과유자차" data-price="3500">
+                        <label for="menu07">
+                            <img src="./키오스크 체험 _files/coffee07.jpeg" alt="(HOT)사과유자차">
+                            <span class="name">(HOT)사과유자차</span>
+                            <span class="price">3,500원</span>
+                        </label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="menu08" data-name="(HOT)헤이즐넛라떼" data-price="3500">
+                        <label for="menu08">
+                            <img src="./키오스크 체험 _files/coffee08.jpeg" alt="(HOT)헤이즐넛라떼">
+                            <span class="name">(HOT)헤이즐넛라떼</span>
+                            <span class="price">3,500원</span>
+                        </label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="menu09" data-name="(HOT)유자차" data-price="3000">
+                        <label for="menu09">
+                            <img src="./키오스크 체험 _files/coffee09.jpeg" alt="(HOT)유자차">
+                            <span class="name">(HOT)유자차</span>
+                            <span class="price">3,000원</span>
+                        </label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="menu10" data-name="복숭아 아이스티" data-price="3000">
+                        <label for="menu10">
+                            <img src="./키오스크 체험 _files/coffee10.jpeg" alt="복숭아 아이스티">
+                            <span class="name">복숭아 아이스티</span>
+                            <span class="price">3,000원</span>
+                        </label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="menu11" data-name="자몽차" data-price="3500">
+                        <label for="menu11">
+                            <img src="./키오스크 체험 _files/coffee11.jpeg" alt="자몽차">
+                            <span class="name">자몽차</span>
+                            <span class="price">3,500원</span>
+                        </label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="menu12" data-name="(ICE)토피넛라떼" data-price="3900">
+                        <label for="menu12">
+                            <img src="./키오스크 체험 _files/coffee12.jpeg" alt="(ICE)토피넛라떼">
+                            <span class="name">(ICE)토피넛라떼</span>
+                            <span class="price">3,900원</span>
+                        </label>
+                    </li>
+                </ul>
+                <div class="menu_move">
+                    <a herf="#"><i class="fa-regular fa-angle-left"></i></a>
+                    <a herf="#"><i class="fa-regular fa-angle-right"></i></a>
+                </div>
+            </div>
+            <div class="order_board">
+                <div class="order_list">
+                </div>
+                <div class="order_time_pay">
+                    <div class="order_time">
+                        <div class="time">
+                            <span class="title">남은시간</span>
+                            <span class="num">120<em>초</em></span>
+                        </div>
+                        <div class="order_del">
+                            <a href="http://www.xn--2i0b122a69q.kr/megacoffee/sub01.do#">전체<br>삭제</a>
+                        </div>
+                    </div>
+                    <div class="order_num">
+                        <span>선택한 상품</span>
+                        <span><em class="price_cnt">0</em>개</span>
+                    </div>
+                    <a href="http://www.xn--2i0b122a69q.kr/megacoffee/sub01.do#" class="order_pay">
+                        <span class="icon"><i class="fa-solid fa-credit-card"></i></span>
+                        <p>
+                            <span class="price_sum">0원</span>
+                            <span>결제하기</span>
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body></html>

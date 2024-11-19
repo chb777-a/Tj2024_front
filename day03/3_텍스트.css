@@ -1,0 +1,21 @@
+/* CSS 주석
+선택자{속성명: 속성값;}
+어디에{무엇을: 어떻게;}*/
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/*"title"이라는 클래스 이름을 가진 마크업 꾸미기*/
+.title{ font-family : "궁서", "굴림";/*글꼴 : 사용자pc에 설치된 글꼴만 가능*/  font-size: 30px; font-style:italic; font-weight: bold;}
+
+
+.content{font-family: 'GmarketSansMedium', "맑은 고딕"; color: #000B58; word-spacing : 7px;/*단어 사이 간격*/ letter-spacing: 5px;/*자간 글자 사이 간격*/ line-height: 160%;/*줄간격*/}
+
+
+.writer{text-align: center;/*텍스트 가로 정렬*/ text-decoration: underline overline line-through;/*텍스트 선긋기 : underline- 밑줄, overline-윗줄, line-through-취소선*/ text-shadow: 10px 10px 5px black;/*x축 y축 오퍼시티 순서, px단위*/} 
+
+/* 색상 : 1.색상명 2.rgb색상[0~255] 3.헥사코드*/
+

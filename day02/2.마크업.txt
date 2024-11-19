@@ -1,0 +1,126 @@
+마크업 - html언어 만든 회사에서 미리 정의한 규칙 및 문법
+    - <시작마크업> 내용물 </끝마크업>
+    - 예외마크업 : <br/>, <hr>
+    - 속성 : 마크업이 가질 수 있는 고유한 성질/특성
+        <마크업 속성명="속성값">
+
+경로
+    - 로컬 : 현재 pc 
+    - 서버 경로
+        => 절대경로 : 모든 경로를 명시하는 방법 (링크 주소)
+        => 상대경로 : 현재 경로에서의 기준으로 상대적인 경로 명시하는 방법
+        ../ : 현재 경로에서 한 번 밖으로 이동한다는 뜻
+        ./ : 현재 경로를 뜻
+        / : 최상위 경로를 뜻
+
+
+마크업 종류 81 ~84
+    1.제목 마크업
+    <h1> ~~ <h6>, 글자크기, 굵게, 구역, 의미
+
+    2. 문단 마크업
+    <p> ~ </p>, parnassus(문단듯), 구역, 의미
+
+    3. 줄바꿈 마크업
+    <br/>, line break
+
+    4. 구분선 마크업
+    <hr/>, horizontal rule, 가로선 추가
+
+    5. 목록 마크업, 홈페이지 메뉴 생성 88~90
+    <ul>, unoder list, 순서없는 목록
+    <ol>, order list, 순서있는 목록
+    <li>, list item, 목록의 내용물, 항목
+
+    6. 링크 마크업
+    <a href=""> </a>
+    href속성 : a 마크업 내용 클릭시 이용할 경로
+        - 파일 경로 1 : 파일명, 확장자
+        - URL 경로2 : https://www.naver.com
+        - 전화번호 경로3 : tel:000-0000-0000 / 전화기능이 있는 디바이스만 가능
+        - tlrqufwk rudfh4 : #id명
+        - target 속성 : 하이퍼링크를 실행 (="_balnk" 새창으로 열기)
+
+    7. 이미지 마크업
+        - <img src="" />
+        - src속성 : 이미지 경로
+            1.로컬 vs 서버 2.절대경로 vs 상대경로
+    
+    8. 오디오 마크업 / 비디오 마크업
+        - <audio> </audio>
+        - <video> </video>
+            => controls : 제어 버튼 활성화
+            => autoplay : 자동 실행, 정책상 불가능
+            => muted : 음소거 (음소거 속성 이용시 자동 실행 가능)
+
+    9. 입력 폼
+        1. <input type="">
+            1. type 속성의 종류
+                1.type="text" : 문자입력, 기본값
+                2.type="password" : 가려진 문자 입력
+                3.type="file" : 첨부파일 입력
+                4.type="radio" : 단일 선택 (name속성 값이 동일)
+                5.type="checkbox" : 복수 선택
+                6.type="email" : @포함 문자입력
+                7.type="color" : 색상 입력
+                8.type="date" : 날짜 입력
+                9.type="time" : 시간 입력
+                10. type="datetime-local" : 날짜/시간 입력
+                11. type="month" : 월 입력
+                12. type="week" : 주 입력
+                13. type="range" : 범위 스크롤
+                14. type="number" : 숫자 입력
+                15. type="submit" : 폼 전송, 자바와 통신
+                16. type="reset" : 폼초기화 버튼
+                17. type="button" : 일반 버튼, 자바스크립트(이벤트 연동) 통신
+            2. name 속성
+                - 각 마크업들의 식별 가능한 이름을 정의하는 곳
+                - 중복 가능함 (id=중복불가)
+            3. id 속성 (중복불가)
+            4. value 속성 (value="")
+                -기본값 (입력상자에 입력된 데이터)
+            5. readonly 속성 : 읽기 모드, 입력 불가능 모드
+            6. disabled 속성 : 비활성화모드, 클릭과 수정 모두 불가능
+            7. placeholder 속성 (placeholder=""): 입력 상자의 가이드라인 텍스트 
+            8. maxlength 속성 (maxlength="") : 입력 상자의 최대 문자 수 
+            9. autofocus 속성 : 지정한 입력상자의 자동 선택
+        
+        2. <textarea> - 긴글 텍스트 상자
+            -rows="가로문자수", cols="세로문자수" 속성
+
+        3. <select> - 목록 상자
+            -구성 : <select> 마크업 안에 <option> 항목 마크업을 사용한다.
+            ex. <select>
+                    <option> 항목1 < /option>
+                    <option> 항목2 < /option>
+                    <option> 항목3 < /option>
+                </select>
+
+        4. <label> - 입력상자의 연관된 텍스트, 이름표 역할
+
+        5. <fieldset> - 폼 안에서 여러 입력상자들을 그룹화
+            -<legend> - 그룹의 제목/이름 설정
+        
+        6.<table> - 표 만드는 마크업 ,일정한 간격으로 텍스트 배치
+            -<tr> </tr> : 행 추가 마크업
+            -<th> </th> : 제목 셀(칸) 추가 마크업
+            -<td> </td> : 데이터 셀(칸) 추가 마크업
+            -속성
+                1. rowspane="행병합수"
+                2. colspan="열병합수"
+                3. border="테이블테두리", <table border="1"> </table>
+                    -CSS 이용한 테두리 병합 : style="border-collapse: collapse
+                
+
+웹 프로그래밍 구조화[프론트]
+    1. HTML : 뼈대
+    2. CSS : 옷 (디자인)
+    3. JS자바스크립트 : 이벤트
+
+웹 프로그래밍 구조화[백엔드]
+    1. JAVA
+    2. DB
+
+웹 개발[프론트+백엔드]
+
+앱 개발[리액트 기반]

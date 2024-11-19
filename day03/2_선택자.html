@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='2_선택자.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <h1>CSS선택지란? 꾸미기할 대상</h1>
+    <h2>1.전체 선택자 : *</h2>
+    <h2>2.마크업선택자 : 마크업명</h2>
+
+
+    <p class="area1 area3">유재석</p>
+    <p class="area1">강호동</p>
+    <p>이경규</p>
+    <h4>김희철</h4>
+    <p id="area2">서장훈</p>
+    <p>아무나</p>
+    <h4>최홍빈</h4>
+
+    <h5>제목1</h5>
+    <h6>제목2</h6>
+
+
+    <!--마크업 안에 마크업을 작성할 수 있다-->
+    <!--root 마크업 : <html> -->
+    <!--div 마크업 : <html> <body> <div>-->
+    <div> <!--div 마크업 : 부모<body>, 자식:<h3>, <ol>, 자손:<li>,<h3>-->
+        <h3>학생 명단</h3>
+        <h3>리스트</h3>
+        <ol>
+            <li><h3>유재석</h3></li>
+            <li><h3 class="area5">강호동</h3></li>
+        </ol>
+    </div>
+</body>
+</html>

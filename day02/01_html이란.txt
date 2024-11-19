@@ -1,0 +1,32 @@
+브라우저 : HTML문서의 프로그래밍 언어를 번역해서 렌더링해주는 소프트웨어
+
+
+HTML 이란?
+1. H(Hyper) T(Text) M(Markup) L(Language) : 하이퍼텍스트 마크업 언어
+    - 하이퍼텍스트 : 서로 다른 문서를 연결 해주는 링크 의미
+        https://www.naver.com ( HTML 문서 )
+        https://nid.naver.com/nidlogin ( HTML 문서)
+    - 마크업 : 구조(html언어를 만든 사람이 구조화한) 표시한다. 규칙/약속, <>
+    - 언어 : 컴퓨터가 이해(번역)할 수 있는 프로그래밍 언어
+
+2. HTML 파일생성
+    1. 폴더 선택 ( HTML 파일을 생성할 폴더) , 오른쪽 클릭
+    2. 새파일
+
+3. html 만들기
+    1. ctrl + space bar => html sample
+
+4. 주석이란
+    - 컴퓨터가 실행하지 않는 구역
+    - 사용처 :
+        1. 협업 (코드 설명 공유)
+        2. 공부 (코드 설명기록)
+
+    - HTML : <!-- 주석내용 -->
+
+5. HTML 실행
+    - HTML문서의 코드가 변경되고 (ctrl+s)저장하고 실행하기
+    방법1 : 폴더내 직접 html 파일을 실행한다.
+    방법2 : 라이브서버 사용하기
+        - 사이드바에서 live server 설치 (ctrl shift x)
+        - 우클릭 open with live server
