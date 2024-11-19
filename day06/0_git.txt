@@ -20,10 +20,12 @@
     3.vscode 재실행 후 왼쪽 메뉴에 소스 제어 탭 클릭
     4.github에 게시
     5.로그인 후 [본인아이디]/프로젝트명 선택 확인 (업로드)
-    6.[vs code 상단메뉴] -> [터미널] -> [새 터미널] -> +아이콘 옆 v 클릭 -> git bash (최초 git 사용시 : git 에서 'user.name' 및 'user email' 구성 해야함)
+    6.[vs code 상단메뉴] -> [터미널] -> [새 터미널] -> +아이콘 옆 v 클릭 -> git bash (최초 git 사용 시/pc 변경 시 : git 에서 'user.name' 및 'user email' 구성 해야함)
     7.[git user.name 확인]git config --global user.name
       [git user.name 설정]git config --global user.name git 아이디
       [git user.email 확인]git config --global user.email
       [git user.email 설정]git config --global user.email git 이메일
     8.소스 제어 탭 - 소스 제어 탭 - 메시지 입력칸(기록 메세지) - 커밋 및 푸시
+    9. [커밋 및 푸시]
+        *만일 최초 git 사용이면 [git 로그인]창 나오면 브라우저 로그인 처리
 
