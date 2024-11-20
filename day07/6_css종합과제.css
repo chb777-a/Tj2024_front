@@ -3,7 +3,8 @@ a{text-decoration: none; color:black;}
 a:active{color: red;}
 
 
-*{margin: 0px ; padding: 0px;}
+*{margin: 0px ; padding: 0px;  font-size: 12px;}
+
 
 .topside_menu{border-bottom: 1px solid gray;
             display: flex; justify-self: flex-end;}
