@@ -1,0 +1,8 @@
+#footer_wrap{background-color: antiquewhite;}
+ul{display: flex; flex-wrap: wrap;
+    padding: 0px; margin: 0px; list-style: none;}
+li{padding: 0; margin: 0px;}
+.footer_go{background-color: rgb(43, 43, 43); border: none; width: 62px; height: 21px; font-size: 11px; text-align: center;}
+a{color: white; text-decoration: none;}
+select{height: 21px;}
+

@@ -18,7 +18,7 @@ console.log(`평균 : ${100 + 50}`) // 평균 : 150
 // 방법2 :  '문자그자체 문자그자체 문자그자체`+ JS코드 +'문자그자체'
 // JS 학습 목적 : HTML 조작/제어/이벤트 하기 위해서
 // HTML는 변수 , 연산 , 배열 , 타입 기능 X -->JS에서 HTML 작성시 JS 코드와 합쳐서 작성할 수 있다.
-let 직원명1 ='신동엽'
+let 직원명1 ='최홍빈'
 let 직원명2 ='강호동'
 let nameHTML = `<ol> <li> ${직원명1} </li> <li> ${직원명2} </li> </ol>` //백틱 사용
 document.write(nameHTML) //document.write() : 현재 HTML에 출력하는 함수
