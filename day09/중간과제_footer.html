@@ -8,19 +8,28 @@
     <link rel='stylesheet' type='text/css' media='screen' href='중간과제_footer.css'>
     <script src='main.js'></script>
 </head>
+
 <body>
     <div id="footer_wrap">
-        <div class="left_area">
+        <div>
+            <div class="left_area">
             <p class="footlogo"><img src="footlogo.png"/></p>
-                <p>05505 서울특별시 송파구 올림픽로 43길 88 서울아산병원
+                <p class="footer_content">05505 서울특별시 송파구 올림픽로 43길 88 서울아산병원
                 <br/>
                 TEL 1688-7575 / webmaster@amc.seoul.kr
                 <br/>
                 Copyright@2014 by Asan Medical Center. All Rights reserved.
                 </p>
+            <div class="left_area_icon">
+                <span><img src="foot_youtube_icon.png"/></span>
+                <span><img src="foot_facebook_icon.png"></span>
+                <span><img src="foot_insta_icon.png"></span>
+                <span><img src="foot_naver_icon.png"></span>
+                <span><img src="foot_navetv_icon.png"></span>
+            </div>
         </div>
 
-            <ul>
+            <ul class="top_area">
                 <li>환자권리장전 │</li>
                 <li>개인정보처리방침 │</li>
                 <li>이용약관 │</li>
@@ -62,12 +71,9 @@
                 <li>
                     <select>센터/클리닉/연구원/기타
                         <option value="0">센터/클리닉/연구원/기타</option>
-                        <option>가정의학과</option>
-                        <option>내과</option>
-                        <option>감염내과</option>
-                        <option>내분비내과</option>
-                        <option>내분비외과</option>
-                        <option>류마티스내과</option>
+                        <option>간센터</option>
+                        <option>건강증진센터</option>
+                        <option>국제진료센터</option>
                     </select>
                     <button class="footer_go" style="color:#ffffff"><a href="#">바로가기</a></button>
                 </li>
@@ -75,18 +81,25 @@
                 <li>
                     <select>관련기관
                         <option value="0">관련기관</option>
-                        <option>가정의학과</option>
-                        <option>내과</option>
-                        <option>감염내과</option>
-                        <option>내분비내과</option>
-                        <option>내분비외과</option>
-                        <option>류마티스내과</option>
+                        <option>아산생명과학연구원</option>
+                        <option>울산대학교의과대학</option>
+                        <option>의학도서관</option>
+                        <option>스마트아카데미</option>
+                        <option>아산의료원 연구센터</option>
                     </select>
                     <button class="footer_go" style="color:#ffffff"><a href="#">바로가기</a></button>
                 </li>
             </ul>
-        </div>
+        </div> <!--select_area_end-->
 
-    </div>
+        <div class="bottom_mark">
+            <span><img src="mark_1.png"></span>
+            <span><img src="mark_2.png"></span>
+            <span><img src="mark_3.png"></span>
+        </div>
+        
+        <input id="stk" type="button" value="챗봇">
+
+    </div> <!-- fooer_wrap_end-->
 </body>
 </html>
