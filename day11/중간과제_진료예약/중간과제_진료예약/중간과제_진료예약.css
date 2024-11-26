@@ -74,8 +74,9 @@ h1{margin: 30px 10px;}
     font-size: 15px;
     font-weight: bold;
     }
-  .two{margin: 10px 0px;}
-
+.two{margin: 10px 0px;}
+.three{font-size: 15px;
+        font-weight: bold;}
 .pad{color: #6a6a6a;}
 
 .class > img {display: block;
