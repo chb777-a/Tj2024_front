@@ -12,7 +12,7 @@ dt{color:#0E787C;}
       text-align: center;
       line-height: 27px;
       width: 150px;
-      height: 27px;
+      height: 30px;
       margin-top: 12px;
       }
 h4{font-size: 18px;}
@@ -40,6 +40,7 @@ h1{margin: 30px 10px;}
         justify-content: left;
         align-items: center;
         }
+.join_1{padding: 0px 15px;}
 .frist_visit{margin: 0px 20px;}
 
           
@@ -70,7 +71,10 @@ h1{margin: 30px 10px;}
     margin: 0px 100px;
     border-right: 1px solid#d3d3d3;
     padding-right: 75px;
+    font-size: 15px;
+    font-weight: bold;
     }
+  .two{margin: 10px 0px;}
 
 .pad{color: #6a6a6a;}
 
@@ -121,7 +125,7 @@ padding: 0px; margin: 0px; list-style: none;}
 #select1, #select2 {margin-top: 5%; width: 25%; margin-left: 40px; }
 #select2{ margin-left: 33%; margin-top: -4%;}
 
-.bottom_mark{margin-left: 67% ;}
+.bottom_mark{margin-left: 65%;}
 #select1 > li > select { width: 50% ; margin-top: 3%;} 
 #select2 > li > select { width: 50%;  margin-top: 3%;}
 
