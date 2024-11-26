@@ -1,0 +1,108 @@
+*{margin: 0px auto; padding: 0px auto;}
+li{list-style: none;}
+a{text-decoration-line: none; }       
+body{width: 100%;}
+
+
+#hdtop{
+    background-color: #444444;
+    height: 50px;
+    border-top: 2px solid orange;
+}
+
+#top{ justify-content: flex-end; }
+#topmn, #lan, #ser{display: flex;}
+#topmn{margin-left: 60%;}
+#topmn > li{
+    margin-top: 10px;
+    color: white; 
+    text-align: center; 
+    margin-right: 10px;
+}
+#lan{ 
+    padding: 0% 10%;
+    background-color: gray;
+    color: white;
+    font-weight: bold;
+    height: 100%;
+}
+#ser{
+    background-image: url(serimg.png);
+    background-size: 30px; 
+    width: 30px;
+    height: 30px;  
+    border: none;
+    margin-left: 7%;
+    margin-top: -4%;
+}
+/*topmenu*/
+
+
+#logo{width: 10%; height: 70%; margin-top: 1%;   }
+#hdbottom{
+    display: flex; 
+    justify-content:space-between;
+    border-bottom: 2px solid #ddd;
+    height: 110px;
+    font-weight: bold;
+    color: #444444;
+}  
+#bottommn{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+        }
+
+#menu{ position: relative; margin: 3%;}
+
+#bottommn > li{ width: 150px;}
+/*bottommenu*/
+
+
+
+
+#submenu1, #submenu2, #submenu3, #submenu4, #submenu5{
+    flex-direction: column;
+    top: 69px;
+    position: absolute;
+    height: 350px;   
+    display: inline;
+    display: flex;
+    border-top: 1px solid #ddd;
+    display: none;
+}
+#submenu2, #submenu3, #submenu4, #submenu5{width: 160%;}
+#submenu1{right: 202%; width:255%; background-color: #f9f9f9; border-right: 1px solid #ddd;}
+#submenu2{right: 42%; border-right: 1px solid #ddd;}
+#submenu3{left: 55%; border-right: 1px solid #ddd;}
+#submenu4{left: 217%; border-right: 1px solid #ddd;}
+#submenu5{left: 380%;}
+#submenu1 > li{
+    width: 80%;
+    padding-left: 10%;
+    background-color: #f9f9f9;
+}
+#a{ 
+    margin-top: 10%;
+    margin-bottom: 8%;
+    font-size: 20px;
+    font-weight: bold;
+}
+.btn1, .btn2{
+    width: 80%;
+    height: 37px;
+    margin: 2%;
+    text-align: start;
+    padding-left: 5%;
+    background-color: #f9f9f9;
+}
+.btn1{color:  #009688; border:  1px solid  #009688;; } 
+.btn2{color: orange; border: 1px solid orange;}
+
+#submenu2 > li{ margin-top: 11%; margin-left: 10%; font-weight: bold;}
+#submenu3 > li{ margin-top: 11%; margin-left: 5%; font-weight: bold;}
+#submenu4 > li{ margin-top: 11%; margin-left: 5%; font-weight: bold;}
+#submenu5 > li{ margin-top: 11%; margin-left: 5%; font-weight: bold;}
+
+#menu:hover .submenu{ display: inline;}
+/*dropdown*/
