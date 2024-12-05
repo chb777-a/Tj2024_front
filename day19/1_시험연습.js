@@ -47,12 +47,13 @@ function 삭제함수(삭제할일코드){
     출력함수();
 }
 
-function 수정함수(수정할일코드){
-    for(let index=0 ; index<=할일목록.length-1 ; index++){
-        if(할일목록[index].할일코드 == 수정할일코드){
+function 수정함수(수정할코드){
+    for( let index= 0; index <= 할일목록.length-1 ; index++){
+        if(할일목록[index].할일코드 == 수정할코드){
             let 할일상태 = 할일목록[index].할일상태
             할일목록[index].할일상태 =! 할일상태
             break;
+
         }
     }
     출력함수();
