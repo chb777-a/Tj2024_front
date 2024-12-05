@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='1_todolist.css'>
+    
+</head>
+<body>
+    <div id="wrap">
+
+        <h1>나만의 할 일 목록</h1>
+        <div id="todoTop">
+            <input class="contentInput"/>
+            <button onclick="등록함수()" class="addBtn">등록</button>
+        </div>
+        
+            <div id="todoBottom">
+                
+                <div class="contentBox">
+                    <div class="content">수업듣기</div>
+                        <div class="contentBtns">
+                            <button class="updateBtn" onclick="수정함수()">수정</button>
+                            <button class="deleteBtn" onclick="삭제함수()">삭제</button>
+                        </div>
+                </div>
+
+            <div class="contentBox success">
+                <div class="content">밥먹기</div>
+                    <div class="contentBtns">
+                        <button class="updateBtn" onclick="수정함수()">수정</button>
+                        <button class="deleteBtn" onclick="삭제함수()">삭제</button>
+                    </div>
+            </div>
+
+        </div> <!--todobottom end-->
+
+    </div><!--wrap end-->
+
+    <script src='1_todolist.js'></script>
+</body>
+</html>

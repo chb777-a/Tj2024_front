@@ -1,0 +1,19 @@
+[GIT PAGE]
+    - git에서 코드 저장소(리포지토리)의 코드를 호스팅 할 수 있는 기능
+    1. 호스팅할 저장소의 메인페이지 파일명을 'index.html'
+    2. 본인 github 접속
+    3. new 또는 new repository
+    4. create a new repository
+        - repository name : tolist ㅇ미의로
+        - public [create repository]
+
+    5. 빈 리포지토리에 화면 가운데 'uploading an existing file' 클릭
+        -> index.html 파일은 리포지토리에 최상위 경로에 있어야한다.
+        [commit change]
+
+    6. 리포지토리 상단 메뉴에 setting 클릭
+    7. 왼쪽 사이드 메뉴에 pages 클릭
+    8.[branch] 항목에서 
+        None Save ==> main /root Save
+    
+    9. 1~2분 기다리기 : 새로고침 -> your site is live at ~~~
