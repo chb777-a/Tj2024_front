@@ -1,0 +1,114 @@
+<!-- 
+    주제 : 관리시스템 만들기               
+    [컨셉1]               
+    OOO 도서 재고 관리               
+        [ 필수 요구사항 ]            
+        - 도서기능            
+            - 도서 등록   , 정보는 3개이상으로 임의 구성합니다.      
+            - 도서 전체 출력         
+            - 도서 정보 수정         
+            - 도서 삭제         
+        - 도서재고 필수 : 재고수량 입고날짜 재고의 식별자 
+            - 재고 (입고/출고)등록   , 정보는 3개이상으로 임의 구성합니다.      
+            - 재고 전체 출력         
+            - 재고 정보 수정         
+            - 재고 삭제         
+    ++ ( 현재 재고 확인 ) 도서별 현재 재고수량을 출력합니다.            
+    ++ 적당한 CSS 합니다            
+
+    권장하는 설계 순서
+    1. 구현할 화면을 스케치(프로토타입) 구성 작성 0
+    2. 구성한 화면을 HTML과 CSS로 샘플 작성하기. 0
+    3. (JS) 배열타입 과 객체타입 를 이용한 메모리 구성 0 
+    4. (JS) 기능/이벤트 구성 
+    5. (JS) 함수별 로직 구현/만들기 -> 각자
+
+
+-->
+    
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel='stylesheet' type='text/css' media='screen' href='2_중간과제14.css'>
+</head>
+<body>
+    <div id="wrap">
+        <div id="newBook">
+            <h1>도서등록</h1>
+            도서명 <input id="bookName" type="text" /><br/>
+            출판사 <input id="bookCom" type="text" /><br/>
+            저자 <input id="bookWri" type="text" /> <br/>
+            <button onclick="도서등록()" type="button">등록</button>
+        </div>
+
+        <hr>
+
+        <div id="bookList">
+    
+            <h3>도서목록</h3>
+            <table border="1">
+                <thead>
+                    <tr><th>도서명</th><th>저자</th><th>출판사</th><th>수정 / 삭제</th></tr>
+                </thead>
+                <tbody class="도서테이블">
+                    
+                </tbody>
+            </table>
+        </div>
+
+        <hr>
+
+
+        <div id="도서수정">
+            <!-- <h3>사원 평가 등록</h3>
+            <form>
+                <h5>평가사원명 : ${검색사원.사원명}</h5>
+                평가 : <input type="text"/>
+                상반기평가 : <input type="text"/>
+                하반기평가 : <input type="text"/>
+                <button type="button">점수등록</button>
+            </form> -->
+        </div>
+
+        <div id="newInven">
+            <h1>재고등록</h1>
+            도서번호 <input id="bookNum" type="text" /><br/>
+            도서개수 <input id="bookCount" type="text" /><br/>
+            입고날짜 <input id="bookDay" type="text" /> <br/>
+            <button type="button">등록</button>
+        </div>
+
+        <hr>
+
+        <div id="invenList">
+            <h3>재고목록</h3>
+            <table border="1">
+                <thead>
+                    <tr><th>도서번호</th><th>도서개수</th><th>입고날짜</th><th>수정/삭제</th></tr>
+                </thead>
+                <tbody class="재고테이블">
+                    <tr><td>1</td><td>1개</td><td>2024-05-12</td><td><button>수정</button><button>삭제</button></td></tr>
+                    <tr><td>2</td><td>2개</td><td>2024-04-12</td><td><button>수정</button><button>삭제</button></td></tr>
+                    <tr><td>3</td><td>3개</td><td>2024-03-12</td><td><button>수정</button><button>삭제</button></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="재고수정">
+            <!-- <h3>사원 평가 등록</h3>
+            <form>
+                <h5>평가사원명 : ${검색사원.사원명}</h5>
+                평가 : <input type="text"/>
+                상반기평가 : <input type="text"/>
+                하반기평가 : <input type="text"/>
+                <button type="button">점수등록</button>
+            </form> -->
+        </div>
+
+    </div> <!-- wrap end -->
+
+    <script src='2_중간과제14.js'></script>
+
+</body>
+</html>
