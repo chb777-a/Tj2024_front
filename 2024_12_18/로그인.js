@@ -13,6 +13,13 @@ function registUser(){
         let user = adminList[index];
         if(user.id == userId && user.pw == userPassword){
             alert("로그인 완료");
+            let loginAno = user.ano;
+            localStorage.setItem('loginAno',JSON.stringify(loginAno))
+            
+            //// +로그아웃 
+            // localStorage.removeItem('loginAno');
+            // location.href="index.html"; // JS에서 제공하는 페이지 이동 함수. location.href="이동하고싶은HTML파일경로"
+
             return;
         }
     }
