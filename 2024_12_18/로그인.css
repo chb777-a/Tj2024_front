@@ -48,15 +48,32 @@ li{
 
 
 /*================== 로그인 페이지 ==================*/
+#content{ 
+    margin: 0 auto; width: 75%;
+    display: flex;
+    align-items: center;
+}
+
+#logo{
+    width: 25%;
+    border-radius: 100%;
+    margin-top: 20px;
+}
+
 #loginPage{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-self: center;
     padding: 15px;
-    margin: 330px auto;
-    
+    margin: 0 auto;
+    width: 50%;
+    height: 650px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px 1px #8d8d8d;
 }
+#loginPage h2{ margin-bottom: 30px; }
 .userId{
     display: flex;
     justify-self: center;
@@ -75,26 +92,23 @@ li{
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
-   
 }
 
 input{
-    width: 450px;
+    width: 200px;
     height: 45px;
     margin-bottom: 20px;
     margin-left: 30px;
-    border-radius: 3% 3%;
+    border-radius: 10px;
     border: 2px solid black;
+    padding: 15px;
+    background-color: white;
 }
 
-.loginBtn {
-    margin-right: 47%;
-    margin-top: -1%;
-}
 .inBtn{
     width: 100px;
     height: 47px;
-    border-radius: 10% 10% ;
+    border-radius: 10px;
     border: none;
     background-color: #00306e;
     color: white;
@@ -102,3 +116,4 @@ input{
     font-size: 17px;
     margin-left: 10px;
 }
+.inBtn:active{ background-color: #004aad;}
