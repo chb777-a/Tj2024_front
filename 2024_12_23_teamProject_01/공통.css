@@ -1,0 +1,36 @@
+/*input css*/
+input{
+    width: 450px;
+    height: 45px;
+    margin-bottom: 20px;
+    border-radius: 3% 3%;
+    border: 2px solid black;
+}
+
+/*버튼 큰 버전*/
+.inBtn , .changeBtn{
+    width: 100px;
+    height: 47px;
+    border-radius: 10% 10% ;
+    border: none;
+    background-color: #00306e;
+    color: white;
+    font-weight: bold;
+    font-size: 17px;
+    margin-left: 10px;
+}
+
+/*버튼 작은 버전*/
+.btn{
+    height: 40px;
+    width: 70px;
+    border-radius: 10px;
+    border: none;
+    background-color: #00306e;
+    color: white;
+    font-weight: bold;
+    margin: 0px 5px;
+    box-shadow: 3px 3px 5px #8d8d8d;
+}
+
+/*크기나 여백은 페이지에 맞게 조절해서 사용해주세용*/
